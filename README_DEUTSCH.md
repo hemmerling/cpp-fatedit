@@ -73,8 +73,7 @@ Hinweise:
 Dies ist ein wirklicher Compiler-Test, bei dem die Microsoft
 Produkte leider nicht so toll wie das Borland Produkt abschneidet.
 
-Falls Sie tatsächlich an einer Veröffentlichung interessiert sind, bin ich bereit, das Programm etwas besser und einheitlich in Deutsch zu kommentieren, die Menüs in die deutsche Sprache zu fassen und die höchst überflüssige Anleitung zu erstellen. Ansonsten bevorzuge ich ein Mischmasch aus Englisch/Deutsch - Kommentaren, englischen Funktionsnamen, englische Mentexten, da dadurch sich ein Programm auch im nichtdeutschen Ausland verwenden läßt. Auáerdem sind
-die Fachausdrücke wie FAT,Sektor,.. ect. sowieso Fremdwörter.
+Falls Sie tatsächlich an einer Veröffentlichung interessiert sind, bin ich bereit, das Programm etwas besser und einheitlich in Deutsch zu kommentieren, die Menüs in die deutsche Sprache zu fassen und die höchst überflüssige Anleitung zu erstellen. Ansonsten bevorzuge ich ein Mischmasch aus Englisch/Deutsch - Kommentaren, englischen Funktionsnamen, englische Mentexten, da dadurch sich ein Programm auch im nichtdeutschen Ausland verwenden läßt. Auáerdem sind die Fachausdrücke wie FAT,Sektor,.. ect. sowieso Fremdwörter.
 
 Machen Sie doch so weiter mit den Verlosungsaktionen mit GROßEN Gewinnstückzahlen. Wenn nur ein Paar wenige Gewinne da sind, hat man ja doch keine Chance, bei 500 Compilern aber doch wohl. Ich warte auf die Verlosung von Quick-Basic, MASM, Microsoft Mouse, Multiplan (Junior), Word (Junior),... . Besteht irgendeine Chance, daß Sie Borland-Produkte
 in Zukunft in ähnlicher Stückzahl verlosen ? Das wäre toll !!!
