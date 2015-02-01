@@ -1,21 +1,22 @@
-# cpp-fatedit - FAT12 und FAT16 Disketten-Editor für MSDOS. 
+# cpp-fatedit
+## FAT12 und FAT16 Disketten-Editor für MSDOS 
 ## Historische deutsche Dokumentation ( Brief an einen Verlag )
 
-  Rolf Hemmerling
-  Im Moore 39
-  3000 Hannover 1
+Rolf Hemmerling  
+Im Moore 39  
+3000 Hannover 1  
 
-  Hannover, 1988-01-18
+Hannover, 1988-01-18  
 
-  An den
-  Vogel-Verlag
-  CHIP-TOOLS
-  Redaktionen München
-  Schillerstraße 23a
-  8000 München 2
+An den  
+Vogel-Verlag  
+CHIP-TOOLS  
+Redaktionen München  
+Schillerstraße 23a  
+8000 München 2  
 
 
-Sehr geehrte Damen und Herren !
+Sehr geehrte Damen und Herren !  
 
 Anbei ein Testprogramm für den Microsoft Quick-C Compiler. Aufgrund mangelnder Bibliotheksfunktionen MUSSTE ein Assemblermodul mit beigefügt werden, das ich bei einem Bekannten assemblieren ließ.
 
@@ -31,7 +32,7 @@ Selbstverständlich muß eine auf Spur 0 defekte Diskette "irgendwie" auf eine f
 
 Mir ist bislang kein anderes kommerzielles oder Public Domain/Shareware-Programm bekannt, das dies SO in dieser Form leistet.
 
-Die prinzipiellen Einschr„nkungen in Krze:
+Die prinzipiellen Einschränkungen in Kürze:
 - grundlegende Annahme: Sektorgröße maximal 1024 Bytes (kann geändert werden im Sourcecode).
 - Da ich nur eine 10 Mbyte Harddisk habe, sind nur die 12-bit FAT Routinen getestet.
 - Nicht lauffähig unter MSDOS 3.3 oder PCDOS 3.3 aufgrund von
@@ -47,7 +48,7 @@ Voraussichtlich werde ich das Programm später einmal noch weiter verbessern, un
 
 Folgende Erweiterungen wären möglich, sind aber im Augenblick
 nur fernes Planungsziel:
-- Text-Suchfunktionen (im FAT-Men)
+- Text-Suchfunktionen (im FAT-Menü)
 - erweiterte FAT-Darstellung: Zuordung jeden Clusters einer Datei (was das heißt, da habe ich noch keine so genauen Vorstellungen)
 
 Verwendete Literatur, von der Konkurrenz aus dem Heise-Verlag:
