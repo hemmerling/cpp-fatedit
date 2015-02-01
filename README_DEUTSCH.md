@@ -84,5 +84,5 @@ Es wäre toll, wenn wie bisher Abonenten NICHT bei der Verlosung einseitig bevor
 Ihr Magazin ist auch ansonsten recht ansprechend !
 Schönen Dank für meinen Gewinn !
 
-Mit freundlichen Grüßen
+Mit freundlichen Grüßen  
 Rolf Hemmerling
