@@ -1,0 +1,8 @@
+*.obj
+*.pdb
+*.sbr
+doc/html
+doc/rtf
+project_misrac/Debug
+project_misrac/.settings
+

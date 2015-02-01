@@ -1,0 +1,15 @@
+#
+fatedit.exe: fatedit.obj absdisk.obj
+ rem cl -AL -Gs -FPc -Od -Zi -Fede de absdisk e:\msc\lib\setargv -link mouse /NOE
+ qcl -AL -Zr -Fede fatedit absdisk e:\msc\lib\setargv -link mouse /NOE
+
+#
+absdisk.obj: absdisk.asm
+ masm  -c -e -l -Mx -v -w2 -z -Zi -Zd -Ie:\bin absdisk,absdisk,absdisk;
+
+#
+fatedit.obj: fatedit.c
+ rem cl -c -AL -Gs -FPc -Od -Zi -Fsde -W3 fatedit.c
+ qcl -c -AL -Zr -W3 fatedit.c
+
+#
