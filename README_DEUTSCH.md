@@ -1,26 +1,18 @@
-# FATEDIT - FAT12 und FAT16 Disketten-Editor für MSDOS. Historische deutsche Dokumentation ( Brief an einen Verlag )
+# cpp-fatedit - FAT12 und FAT16 Disketten-Editor für MSDOS. 
+## Historische deutsche Dokumentation ( Brief an einen Verlag )
 
-Rolf Hemmerling
+  Rolf Hemmerling
+  Im Moore 39
+  3000 Hannover 1
 
-Im Moore 39
+  Hannover, 1988-01-18
 
-3000 Hannover 1
-
-
-Hannover, 1988-01-18
-
-
-An den
-
-Vogel-Verlag
-
-CHIP-TOOLS
-
-Redaktionen München
-
-Schillerstraße 23a
-
-8000 München 2
+  An den
+  Vogel-Verlag
+  CHIP-TOOLS
+  Redaktionen München
+  Schillerstraße 23a
+  8000 München 2
 
 
 Sehr geehrte Damen und Herren !
