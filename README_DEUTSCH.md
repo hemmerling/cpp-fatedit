@@ -1,6 +1,6 @@
 # cpp-fatedit
 FATEDIT ist ein FAT12 und FAT16 Disketten-Editor, zum Editieren der File Allocation Table ( FAT ) und dem Inhaltsverzeichnis von MSDOS Disketten mit 12-bit FAT ( FAT12 ) und von Harddisks mit 16-bit FAT ( FAT16 ).
-Es ist auf IBM-PC/AT Rechnern mit dem Betriebssystem MSDOS lauffähig. 
+Es ist auf IBM-PC/AT kompatiblen Rechnern mit dem Betriebssystem MSDOS lauffähig. 
 ## Historische deutsche Dokumentation ( Brief an einen Verlag )
 
 Rolf Hemmerling  
