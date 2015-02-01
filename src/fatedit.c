@@ -49,7 +49,7 @@
  *   - VDISK (with 128,256,512 byte sectors, with 12-bit FAT)
  *  NOT compatible with
  *   - PLANTRON ramdisk (which emulates drive C: or D:, wrong bootsector
- *     informations
+ *     informations )
  *   - disks with a media byte in the bootsector only
  *   - ATARI TOS disks
  *
