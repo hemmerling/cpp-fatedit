@@ -1,5 +1,5 @@
 # cpp-fatedit
-## FAT12 und FAT16 Disketten-Editor für MSDOS 
+FATEDIT ist ein FAT12 und FAT16 Disketten-Editor, lauffähig auf IBM-PC Rechnern mit dem Betriebssystem MSDOS. 
 ## Historische deutsche Dokumentation ( Brief an einen Verlag )
 
 Rolf Hemmerling  
