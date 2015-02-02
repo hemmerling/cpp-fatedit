@@ -35,9 +35,19 @@
 #ifdef __TI_COMPILER_VERSION__
 /**
  *  @def      CHECK_MISRA
- *  @brief    CHECK_MISRA
+ *  @brief    Be shure to select the MSP430 compiler 
+ *            and not the ARM compiler
+ *            as MISRA-C checker for this project,
+ *            as just this compiler understands K&R coding style 
+ *            used with this source code
  */
 #pragma CHECK_MISRA("all")
+
+/**
+ *  @def      MISRAC
+ *  @brief    MISRAC
+ */
+#define MISRAC
 
 /**
  *  @def      _osmajor

@@ -412,9 +412,13 @@ unsigned int put_fatentry16(value,index,fatlength,fatnumber,fatptr2)
     return(value);
   }
 
+#ifdef MISRAC2
+int get_bootinfo(char drive,bootsec_tp *btptr2)
+#else
 int get_bootinfo(drive,btptr2)
  char drive;
  bootsec_tp * btptr2;
+#endif
  { int error2;
    if ((error2 = absread((int)(toupper(drive) - 'A'),1,0,btptr2)) == NULL)
       { dirsecs = ((*btptr2).number_of_direntries << 5) >> 9;
@@ -437,17 +441,25 @@ int get_bootinfo(drive,btptr2)
    return (error2);
  }
 
+#ifdef MISRAC
+int put_bootinfo(char drive,bootsec_tp *btptr2)
+#else
 int put_bootinfo(drive,btptr2)
  char drive;
  bootsec_tp * btptr2;
+#endif
  { int error2;
    error2 = abswrite((int)(toupper(drive) - 'A'),1,0,btptr2);
    return (error2);
  }
 
+#ifdef MISRAC
+int get_maindir(char drive,struct direntry_tp *dirptr2)
+#else
 int get_maindir(drive,dirptr2)
  char drive;
  struct direntry_tp *dirptr2;
+#endif
  { int error2;
    /* first logical sector = sector 0 !! */
 #ifdef TEST1
@@ -459,9 +471,13 @@ int get_maindir(drive,dirptr2)
    return (error2);
  }
 
+#ifdef MISRAC
+int put_maindir(char drive,struct direntry_tp *dirptr2)
+#else
 int put_maindir(drive,dirptr2)
  char drive;
  struct direntry_tp *dirptr2;
+#endif
  { int error2;
    /* first logical sector = sector 0 !! */
 #ifdef TEST1
@@ -473,10 +489,14 @@ int put_maindir(drive,dirptr2)
    return (error2);
  }
 
+#ifdef MISRAC
+int get_fats(char drive,fatsec_tp *fatptr2,bootsec_tp *btptr2)
+#else
 int get_fats(drive,fatptr2,btptr2)
  char drive;
  fatsec_tp *fatptr2;
  bootsec_tp *btptr2;
+#endif
  { int error2;
    /* first logical sector = sector 0 !! */
    error2 = (absread((int)(toupper(drive) - 'A'),
@@ -484,10 +504,14 @@ int get_fats(drive,fatptr2,btptr2)
    return (error2);
  }
 
+#ifdef MISRAC
+int put_fats(char drive,fatsec_tp *fatptr2,bootsec_tp *btptr2)
+#else
 int put_fats(drive,fatptr2,btptr2)
  char drive;
  fatsec_tp *fatptr2;
  bootsec_tp *btptr2;
+#endif
  { int error2;
    /* first logical sector = sector 0 !! */
    error2 = (abswrite((int)(toupper(drive) - 'A'),
@@ -990,10 +1014,14 @@ void enter_fatentry(selfentry,fatlength,fatnumber,fatptr2)
     };
  }
 
+#ifdef MISRAC
+void hex_view(char drive,unsigned char *viptr2,bootsec_tp *btptr2)
+#else
 void hex_view(drive,viptr2,btptr2)
  char drive;
  unsigned char *viptr2;
  bootsec_tp * btptr2;
+#endif
  { int i,fsector,k,first;
    unsigned char *viptr3;
    fsector = clustosec(fat_entry,btptr2);
@@ -1030,10 +1058,14 @@ void hex_view(drive,viptr2,btptr2)
    printf("\n");
  }
 
+#ifdef MISRAC
+void ascii_view(char drive,unsigned char *viptr2,bootsec_tp *btptr2)
+#else
 void ascii_view(drive,viptr2,btptr2)
  char drive;
  unsigned char *viptr2;
  bootsec_tp * btptr2;
+#endif
  { int i,fsector;
    fsector = clustosec(fat_entry,btptr2);
    if ((absread((int)(toupper(drive) - 'A'),(*btptr2).sectors_per_cluster,

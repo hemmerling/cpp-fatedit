@@ -31,7 +31,7 @@
 /* ============================================================================ */
 
 /******************************************************************************/
-/* lnk_msp430e112.cmd - LINKER COMMAND FILE FOR LINKING MSP430E112 PROGRAMS     */
+/* lnk_msp430p337.cmd - LINKER COMMAND FILE FOR LINKING MSP430P337 PROGRAMS     */
 /*                                                                            */
 /*   Usage:  lnk430 <obj files...>    -o <out file> -m <map file> lnk.cmd     */
 /*           cl430  <src files...> -z -o <out file> -m <map file> lnk.cmd     */
@@ -56,8 +56,8 @@ MEMORY
     SFR                     : origin = 0x0000, length = 0x0010
     PERIPHERALS_8BIT        : origin = 0x0010, length = 0x00F0
     PERIPHERALS_16BIT       : origin = 0x0100, length = 0x0100
-    RAM                     : origin = 0x0200, length = 0x0100
-    ROM                     : origin = 0xF000, length = 0x0FE0
+    RAM                     : origin = 0x0200, length = 0x0400
+    FLASH                   : origin = 0x8000, length = 0x7FE0
     INT00                   : origin = 0xFFE0, length = 0x0002
     INT01                   : origin = 0xFFE2, length = 0x0002
     INT02                   : origin = 0xFFE4, length = 0x0002
@@ -87,32 +87,32 @@ SECTIONS
     .sysmem     : {} > RAM                  /* DYNAMIC MEMORY ALLOCATION AREA    */
     .stack      : {} > RAM (HIGH)           /* SOFTWARE SYSTEM STACK             */
 
-    .text       : {} > ROM                  /* CODE                              */
-    .cinit      : {} > ROM                  /* INITIALIZATION TABLES             */
-    .const      : {} > ROM                  /* CONSTANT DATA                     */
+    .text       : {} > FLASH                /* CODE                              */
+    .cinit      : {} > FLASH                /* INITIALIZATION TABLES             */
+    .const      : {} > FLASH                /* CONSTANT DATA                     */
     .cio        : {} > RAM                  /* C I/O BUFFER                      */
 
-    .pinit      : {} > ROM                  /* C++ CONSTRUCTOR TABLES            */
-    .init_array : {} > ROM                  /* C++ CONSTRUCTOR TABLES            */
-    .mspabi.exidx : {} > ROM                /* C++ CONSTRUCTOR TABLES            */
-    .mspabi.extab : {} > ROM                /* C++ CONSTRUCTOR TABLES            */
+    .pinit      : {} > FLASH                /* C++ CONSTRUCTOR TABLES            */
+    .init_array : {} > FLASH                /* C++ CONSTRUCTOR TABLES            */
+    .mspabi.exidx : {} > FLASH              /* C++ CONSTRUCTOR TABLES            */
+    .mspabi.extab : {} > FLASH              /* C++ CONSTRUCTOR TABLES            */
 
 
     /* MSP430 INTERRUPT VECTORS          */
-    .int00       : {}               > INT00
-    .int01       : {}               > INT01
+    PORT0        : { * ( .int00 ) } > INT00 type = VECT_INIT
+    BASICTIMER   : { * ( .int01 ) } > INT01 type = VECT_INIT
     PORT1        : { * ( .int02 ) } > INT02 type = VECT_INIT
     PORT2        : { * ( .int03 ) } > INT03 type = VECT_INIT
-    .int04       : {}               > INT04
+    TIMERPORT    : { * ( .int04 ) } > INT04 type = VECT_INIT
     .int05       : {}               > INT05
-    .int06       : {}               > INT06
-    .int07       : {}               > INT07
+    USARTTX      : { * ( .int06 ) } > INT06 type = VECT_INIT
+    USARTRX      : { * ( .int07 ) } > INT07 type = VECT_INIT
     TIMERA1      : { * ( .int08 ) } > INT08 type = VECT_INIT
     TIMERA0      : { * ( .int09 ) } > INT09 type = VECT_INIT
     WDT          : { * ( .int10 ) } > INT10 type = VECT_INIT
     .int11       : {}               > INT11
-    .int12       : {}               > INT12
-    .int13       : {}               > INT13
+    IO1          : { * ( .int12 ) } > INT12 type = VECT_INIT
+    IO0          : { * ( .int13 ) } > INT13 type = VECT_INIT
     NMI          : { * ( .int14 ) } > INT14 type = VECT_INIT
     .reset       : {}               > RESET  /* MSP430 RESET VECTOR         */ 
 }
@@ -121,5 +121,5 @@ SECTIONS
 /* INCLUDE PERIPHERALS MEMORY MAP                                           */
 /****************************************************************************/
 
--l msp430e112.cmd
+-l msp430p337.cmd
 
